@@ -1,0 +1,50 @@
+INFO - 2024-07-01 14:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-01 14:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-01 14:46:30 --> ErrorException: Undefined variable $subPage
+[Method: GET, Route: berita]
+in APPPATH\Views\user\layout.php on line 55.
+ 1 APPPATH\Views\user\layout.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subPage', 'D:\\Personal\\xampp\\htdocs\\pleret\\app\\Views\\user\\layout.php', 55)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Personal\\xampp\\htdocs\\pleret\\app\\Views\\user\\layout.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('user/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/berita', [], true)
+ 6 APPPATH\Controllers\User\Berita.php(15): view('user/berita', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Berita->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Berita))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\Personal\\xampp\\htdocs\\pleret\\public\\index.php')
+CRITICAL - 2024-07-01 15:08:31 --> ErrorException: Undefined variable $subPage
+[Method: GET, Route: /]
+in APPPATH\Views\user\layout.php on line 64.
+ 1 APPPATH\Views\user\layout.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subPage', 'D:\\Personal\\xampp\\htdocs\\pleret\\app\\Views\\user\\layout.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Personal\\xampp\\htdocs\\pleret\\app\\Views\\user\\layout.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('user/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/index', [], true)
+ 6 APPPATH\Controllers\User\Home.php(15): view('user/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\Personal\\xampp\\htdocs\\pleret\\public\\index.php')
+CRITICAL - 2024-07-01 15:08:37 --> ErrorException: Undefined variable $subPage
+[Method: GET, Route: destinasi/pantai-mlarangan-asri]
+in APPPATH\Views\user\layout.php on line 64.
+ 1 APPPATH\Views\user\layout.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subPage', 'D:\\Personal\\xampp\\htdocs\\pleret\\app\\Views\\user\\layout.php', 64)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Personal\\xampp\\htdocs\\pleret\\app\\Views\\user\\layout.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('user/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/pantaimlaranganasri', [], true)
+ 6 APPPATH\Controllers\User\Pantai.php(15): view('user/pantaimlaranganasri', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Pantai->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Pantai))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\Personal\\xampp\\htdocs\\pleret\\public\\index.php')

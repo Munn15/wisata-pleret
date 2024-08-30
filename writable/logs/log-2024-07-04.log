@@ -1,0 +1,70 @@
+CRITICAL - 2024-07-04 07:43:12 --> RuntimeException: View themes, no current section.
+[Method: GET, Route: peta]
+in SYSTEMPATH\View\View.php on line 442.
+ 1 APPPATH\Views\user\peta.php(142): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Personal\\xampp\\htdocs\\pleret\\app\\Views\\user\\peta.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/peta', [], true)
+ 5 APPPATH\Controllers\User\Peta.php(20): view('user/peta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Peta->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Peta))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\Personal\\xampp\\htdocs\\pleret\\public\\index.php')
+ERROR - 2024-07-04 09:11:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Personal\xampp\htdocs\pleret\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Personal\xampp\htdocs\pleret\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pleret', 3306, '', 0)
+#1 D:\Personal\xampp\htdocs\pleret\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Personal\xampp\htdocs\pleret\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Personal\xampp\htdocs\pleret\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Personal\xampp\htdocs\pleret\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Personal\xampp\htdocs\pleret\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Personal\xampp\htdocs\pleret\app\Controllers\Admin\Wisata.php(21): CodeIgniter\BaseModel->findAll()
+#7 D:\Personal\xampp\htdocs\pleret\system\CodeIgniter.php(933): App\Controllers\Admin\Wisata->index()
+#8 D:\Personal\xampp\htdocs\pleret\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wisata))
+#9 D:\Personal\xampp\htdocs\pleret\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Personal\xampp\htdocs\pleret\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Personal\xampp\htdocs\pleret\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Personal\xampp\htdocs\pleret\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\Personal\xampp\htdocs\pleret\system\Commands\Server\rewrite.php(49): require_once('D:\\Personal\\xam...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Personal\xampp\htdocs\pleret\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Personal\xampp\htdocs\pleret\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Personal\xampp\htdocs\pleret\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Personal\xampp\htdocs\pleret\system\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Personal\xampp\htdocs\pleret\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Personal\xampp\htdocs\pleret\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Personal\xampp\htdocs\pleret\app\Controllers\Admin\Wisata.php(21): CodeIgniter\BaseModel->findAll()
+#6 D:\Personal\xampp\htdocs\pleret\system\CodeIgniter.php(933): App\Controllers\Admin\Wisata->index()
+#7 D:\Personal\xampp\htdocs\pleret\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wisata))
+#8 D:\Personal\xampp\htdocs\pleret\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Personal\xampp\htdocs\pleret\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Personal\xampp\htdocs\pleret\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Personal\xampp\htdocs\pleret\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\Personal\xampp\htdocs\pleret\system\Commands\Server\rewrite.php(49): require_once('D:\\Personal\\xam...')
+#13 {main}
+CRITICAL - 2024-07-04 09:11:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: wisata]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1637): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `wisata`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Admin\Wisata.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Wisata->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Wisata))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('D:\\Personal\\xampp\\htdocs\\pleret\\public\\index.php')
+INFO - 2024-07-04 09:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-04 09:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-04 09:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-04 09:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
